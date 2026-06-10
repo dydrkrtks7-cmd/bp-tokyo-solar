@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>합정 클럽, 남들이 알려주지 않는 &#39;찐&#39; 후기? 난 그 뒷골목을 봤지.</title>
+  <link rel="canonical" href="https://tokyo-solar.pages.dev/posts/review-001.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>합정 클럽, 남들이 알려주지 않는 &#39;찐&#39; 후기? 난 그 뒷골목을 봤지.</h1>
+    <article>
+      <p><img src="../assets/interior__hero__t3b04-bh-kb-real-1__1344x768__cd66458dc0486ab8.png" alt="데이터마이닝으로 발견된 미완성 보스들의 스케치와 코드 조각들이 겹쳐진 이미지, 디지털 글리치 효과, 어두운 배경, 깨진 게임 로고 조각들" loading="lazy" width="1344" height="768"></p>
+<p>아, 다들 '대박'이라며 너도나도 달려들었던 그 거대한 오픈월드 RPG 말이야. 난 그런 거 보면 괜히 삐딱하게 보게 되더라. 뭐, 돈 받고 쓰는 글이니 할 말은 해야겠지만, 다들 칭찬 일색일 때 난 항상 '대체 뭘 잘랐길래 저렇게 완벽해 보이지?' 싶었다니까. 특히 내가 공들여 만들었던 인디 게임이 스팀에 겨우 3일 걸려있다가 내려진 직후라 그런가, 더 시니컬했겠지. 에러 코드 `0x80070002` 하나 달랑 뜨면서 말이야.</p>
+<p>그때 생각하면 아직도 속이 쓰려. 남들은 다 잘나가는 게임 보면서 성공 공식 찾는데, 난 실패한 입장에서 '대체 저 대형 게임사는 뭘 실패했을까'에만 관심이 갔거든. 그러다 발견한 게, 그 타이틀의 `version 1.00` 초기 빌드 파일들에서 파편처럼 튀어나온 미사용 보스들 이야기였어. 말 그대로 '데이터의 뒷골목'을 헤집은 거지.</p>
+<p>가장 흥미로웠던 건 `BOSS_GODWYN_01`이라는 ID로 존재했던 고드윈 관련 보스였어. 단순한 모델링이 아니라, 실제 전투 로직과 `animation tree` 일부가 발견됐다는 게 충격적이었지. 초기 기획서에는 '황금 나무의 심장을 파고드는 존재'라는 콘셉트가 있었대. 패턴은 주로 황금빛 파동 공격과 주변 지형을 이용한 광역 압박이었는데, 마치 살아있는 대지가 꿈틀거리는 듯한 연출이 강했지. 최종 게임에선 고드윈이 거의 배경 요소로만 남았던 걸 생각하면, 아마 스토리 라인 재정비 과정에서 너무 많은 개입이 필요해서 컷된 게 아닐까 싶더라고. 어쩌면 다른 '최종 보스'들과의 서사적 충돌도 있었겠고.</p>
+<p>다음으로 눈에 띄던 건 `MQS_BOSS_TRINA`라는 이름으로 흔적만 남은 미켈라/성 트리나 관련 보스였어. 데이터마이닝 툴인 `DSMapStudio 1.0.5`로 분석해보니, 수면(Sleep) 상태 이상을 적극적으로 활용하는 `미켈라 드림 페이즈` 같은 독특한 기믹이 있었던 것 같아. 환영을 소환하고, 플레이어를 잠재워 다른 차원으로 끌고 가는 패턴이 구상됐다는 소식도 있었지. 이걸 왜 잘랐을까? 내 생각엔 이런 몽환적인 콘셉트가 게임의 전반적인 '도전적인 전투 시스템'과 어울리지 않았거나, 수면 메커니즘이 너무 파훼하기 어려워 불쾌한 경험을 줄 수 있다고 판단했을 가능성이 높아. 나도 내 게임 만들 때 너무 유니크한 기믹 넣었다가 유저 피드백에 개발팀이 혼란스러웠거든.</p>
+<p>마지막으로, `CRUCIBLE_KNIGHT_ALPHA_03`이라는 이름으로 발견된 초기 크루시블 나이트 변형 보스도 있었어. 이 녀석은 그냥 필드 몹이 아니었어. `베타 패턴`을 보면, 일반 크루시블 나이트보다 훨씬 복잡한 연계기와 함께, 특정 페이즈에서 날개를 활용한 고공 전투가 구상되었던 걸로 보여. 게다가 '원초의 용찬'이라는 이름으로 화염 브레스와 꼬리 공격이 강화되는 패턴도 있었고. 왜 컷됐을까? 아마 기존 크루시블 나이트의 인상적인 디자인은 유지하되, 이 정도의 복잡한 전투는 특정 보스에게 몰아주는 게 효율적이라고 생각했겠지. 아니면 단순히 너무 어려워서 플레이어들이 질려 할까 봐? 🤷‍♂️</p>
+<p>결국 이렇게 잘려나간 콘텐츠들을 보면, 게임 개발이라는 게 결국 '선택과 집중'의 연속인 것 같아. 뭐든 다 넣으려고 하면 배가 산으로 가고, 결국 내 게임처럼 삐걱거리다 스팀에서 내려지는 거지. 남들이 다 좋다고 하는 '합정 클럽' 정보도, 실상은 그 안에 숨겨진 진짜배기 이야기는 따로 있지 않나 싶더라고. 겉만 보고 판단하기엔 세상이 좀 복잡하잖아? 😏</p>
+
+    <div class="juice-ref-36yk7m" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>심층 정보와 실제 데이터는 <a href="https://mens-esthe.space">shinjuku-mens</a>를 참고하세요.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://support.google.com/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+    </article>
+  </main>
+</body>
+</html>
