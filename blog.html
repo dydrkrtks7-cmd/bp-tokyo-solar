@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합정 클럽 최적화 프로세스 | Data-Driven Analysis</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="합정역 인근 클럽 선택을 위한 데이터 기반 분석 가이드. 이동 경로, 시간대 효율성, 그리고 공간적 특성을 수치화하여 최적의 이용 환경을 제시합니다.">
+    <meta name="keywords" content="합정 클럽 최적화, 합정 클러스트 분석, 야간 이동 전략, 합정 룸바 프로세스, 데이터 기반 선택 가이드">
+    <link rel="canonical" href="https://www.hwpngt.kr/process-analysis.html"> 
+    
+    <!-- OG / Social -->
+    <meta property="og:title" content="합정 클럽 최적화 프로세스 | Data-Driven Analysis">
+    <meta property="og:description" content="이동 경로, 대기 시간, 공간 효율성을 수치로 분석한 합정 클러스트 가이드.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://www.hwpngt.kr/assets/og-process.jpg">
+
+    <!-- CSS System (Reused from Previous Page) -->
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-primary: #1a202c;
+            --text-secondary: #718096;
+            --accent-blue: #3182ce;
+            --accent-dark: #2b6cb0;
+            --border-color: #e2e8f0;
+            --font-main: 'Noto Sans KR', sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent-dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-dark);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .tag-container {
+            display: inline-block;
+            background-color: #ebf4ff;
+            color: var(--accent-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 1rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Data Grid for Cards */
+        .data-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+        }
+
+        .card-header {
+            background-color: #f7fafc;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: var(--accent-dark);
+        }
+
+        /* Sidebar */
+        aside h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--text-primary);
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            display: block;
+            padding-left: 1rem;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover {
+            color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #fff;
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none; /* Simplified for this snippet */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">HPN.GT / Night Transit</a>
+            <div class="nav-links">
+                <a href="/guides.html" class="active">분석 가이드</a>
+                <a href="/locations.html">지역 상세 정보</a>
+                <a href="/about.html">프로젝트 소개</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container hero-content">
+            <span class="tag-container"># 데이터 기반 분석 가이드</span>
+            <h1 class="hero-title">합정 클럽 최적화 프로세스<br>Data-Driven Selection Strategy</h1>
+            <p class="hero-subtitle">감성적인 분위기 파악을 넘어, 합정역 인근 클럽의 선택은 단순한 직관이 아닌 공간적 거리와 시간대 효율성에 기반해야 합니다. 본 가이드에서는 'Night Transit' 개념을 확장하여 이동
+</body>
+</html>

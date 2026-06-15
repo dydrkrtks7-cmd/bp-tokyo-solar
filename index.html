@@ -1,758 +1,404 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>합정 클럽 추천정보 | Tokyo Solar – 합정 대표 클럽 & 라이브하우스</title>
-    <meta name="description" content="합정 클럽 추천정보의 기준. Tokyo Solar은 2022년 오픈 이후 매주 500+ 방문객이 찾는 합정 대표 클럽입니다. 업계 최고 사운드시스템 & 큐레이션, 현장 리뷰 평점 4.8/5.0. 전화 010-6279-0862">
-    <meta name="keywords" content="합정 클럽, 합정 클럽 추천정보, 합정 클럽 추천, Tokyo Solar, 합정 라이브하우스, 합정 홍대 클럽, 서울 클럽, 클럽 예약">
-    <meta name="author" content="Tokyo Solar">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://top-seocho-karaoke.xyz/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합정 클러스트 | 합정 클럽 추천정보 및 노선도 가이드</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="합정역 인근 클럽 환경 분석 및 선택 가이드. 지하철 노선과 연계된 접근성 데이터, 이용 전 필수 확인사항, 그리고 목적별 최적화 전략을 제공합니다. 합정 클럽 추천정보의 정석입니다.">
+    <meta name="keywords" content="합정 클럽 추천정보, 합정역 클럽, 클럽 리뷰, 밤문화 정보, 합정 룸바, 합정 클러스트, 합정 파티">
+    <link rel="canonical" href="https://www.hwpngt.kr/">
 
-    <!-- 디자인 시스템 메타 -->
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-
-    <!-- OG / Twitter Card -->
-    <meta property="og:title" content="Tokyo Solar – 합정 클럽 추천정보 No.1">
-    <meta property="og:description" content="합정 클럽 추천정보의 기준. 2022년 오픈 이후 업계 최고 평점 4.8. 프리미엄 사운드, 엄선된 큐레이션.">
-    <meta property="og:url" content="https://top-seocho-karaoke.xyz/">
+    <!-- OG / Social -->
+    <meta property="og:title" content="합정 클러스트 | Night Transit Map Guide">
+    <meta property="og:description" content="데이터 기반 합정 클럽 선택 전략. 접근성, 분위기, 이용 조건을 노선도처럼 시각화했습니다.">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tokyo Solar – 합정 클럽 추천정보">
-    <meta name="twitter:description" content="합정 클럽 추천정보의 기준. 평점 4.8, 프리미엄 사운드 시스템.">
 
-    <!-- JSON-LD Schema (LocalBusiness) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "NightClub",
-        "name": "Tokyo Solar",
-        "alternateName": "도쿄 솔라",
-        "url": "https://tokyo-solar.pages.dev/",
-        "telephone": "+82-10-6279-0862",
-        "description": "합정 클럽 추천정보 1위. 2022년 오픈, 매주 500+ 방문객. 프리미엄 사운드 시스템과 엄선된 뮤직 큐레이션.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "서울특별시",
-            "addressRegion": "마포구",
-            "addressCountry": "KR",
-            "streetAddress": "합정동"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "bestRating": "5.0",
-            "ratingCount": "387"
-        },
-        "priceRange": "₩₩",
-        "openingHours": "Th 20:00-04:00, Fr 20:00-05:00, Sa 20:00-06:00",
-        "sameAs": [
-            "https://www.instagram.com/tokyo_solar/",
-            "https://www.facebook.com/tokyosolar"
-        ]
-    }
-    </script>
+    <!-- Design System Meta -->
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-night-signal">
 
+    <!-- Fonts (Google Fonts CDN via style for vanilla implementation) -->
     <style>
-        /* ===== RESET & BASE ===== */
-        *,
-        *::before,
-        *::after {
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+        :root {
+            --c-primary: #08080f;       /* Deep Black/Blue */
+            --c-secondary: #f0f0f5;     /* Off White */
+            --c-tertiary: #a1a2b3;      /* Muted Grey for grid lines/text hints */
+            --c-accent: #ff5c1a;        /* Signal Orange */
+            --c-accent-dim: rgba(255, 92, 26, 0.1);
+            
+            --f-heading: 'Barlow Condensed', sans-serif;
+            --f-body: 'Noto Sans KR', sans-serif;
+
+            --s-xs: 0.75rem;   /* 12px */
+            --s-sm: 1rem;      /* 16px */
+            --s-md: 1.125rem;  /* 18px */
+            --s-lg: 1.5rem;    /* 24px */
+            --s-xl: 2.5rem;    /* 40px */
+            --s-xxl: 3.75rem;  /* 60px */
+
+            --sp-container: 48px;
+            --p-section: 72px;
+            
+            --bg-grid-size: 48px;
+        }
+
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
         body {
-            background: #000000;
-            color: #ffffff;
-            font-family: 'Impact', 'Arial Black', system-ui, -apple-system, sans-serif;
-            line-height: 1.2;
-            letter-spacing: 0.02em;
-            min-height: 100vh;
-            padding: 0;
-            margin: 0;
+            background-color: var(--c-primary);
+            color: var(--c-secondary);
+            font-family: var(--f-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            
+            /* Grid Background System */
+            background-image: 
+                linear-gradient(to right, var(--c-tertiary) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--c-tertiary) 1px, transparent 1px);
+            background-size: var(--bg-grid-size) var(--bg-grid-size);
         }
 
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4 {
-            font-weight: 900;
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--f-heading);
             text-transform: uppercase;
-            letter-spacing: 0.01em;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
-        h1 {
-            font-size: clamp(3.2rem, 12vw, 6.5rem);
-            line-height: 0.85;
-            margin: 0;
+        h1 { font-size: clamp(3rem, 8vw, var(--s-xxl)); margin-bottom: calc(var(--p-section) / 2); font-weight: 700; }
+        h2 { 
+            font-size: clamp(1.5rem, 4vw, var(--s-xl)); 
+            display: inline-block; 
+            position: relative;
+            padding-right: 24px;
+            margin-bottom: calc(var(--sp-container) / 3);
+            border-right: 4px solid var(--c-accent);
         }
 
-        h2 {
-            font-size: clamp(2.4rem, 8vw, 4.2rem);
-            line-height: 0.9;
-            margin: 0 0 24px 0;
-            border-bottom: 4px solid #ff3b00;
-            display: inline-block;
-            padding-bottom: 8px;
+        h3 { font-size: var(--s-lg); color: #fff; margin-top: 24px; }
+        p { font-size: var(--s-md); margin-bottom: 1.5rem; max-width: 68ch; text-align: justify; }
+        
+        .small-text { 
+            font-family: var(--f-body); 
+            font-size: var(--s-xs); 
+            color: var(--c-tertiary); 
+            letter-spacing: 0.05em; 
+            text-transform: uppercase; 
         }
 
-        h3 {
-            font-size: clamp(1.6rem, 5vw, 2.8rem);
-        }
-
-        p {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin: 0 0 16px 0;
-            max-width: 720px;
-        }
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 3px solid #ff3b00;
-            transition: all 0.15s ease;
-        }
-
-        a:hover {
-            color: #ff3b00;
-            border-bottom-color: #ffffff;
-        }
-
-        strong, b {
-            color: #ff3b00;
-        }
-
-        /* ===== UTILITIES ===== */
+        /* Layout Containers */
         .container {
             width: 100%;
-            padding: 72px 40px;
+            max-width: 1440px;
             margin: 0 auto;
+            padding: 0 var(--sp-container);
         }
 
-        .container--narrow {
-            max-width: 1100px;
-            margin: 0 auto;
+        section {
+            padding: calc(var(--p-section) + 48px) 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        .gap-48 {
-            gap: 48px;
+        .section-header {
+            margin-bottom: var(--sp-container);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid rgba(240,240,245,0.2);
+            padding-bottom: 24px;
         }
 
-        .gap-72 {
-            gap: 72px;
-        }
-
-        .section-gap {
-            padding: 120px 40px;
-        }
-
-        .border-brutal {
-            border: 4px solid #ffffff;
-            background: #000000;
-            padding: 32px;
-            box-shadow: 8px 8px 0 #ff3b00;
-        }
-
-        .border-brutal--accent {
-            border-color: #ff3b00;
-            box-shadow: 8px 8px 0 #ffffff;
-        }
-
-        .text-accent {
-            color: #ff3b00;
-        }
-
-        .text-white {
-            color: #ffffff;
-        }
-
-        .bg-black {
-            background: #000000;
-        }
-
-        .bg-accent {
-            background: #ff3b00;
-            color: #000000;
-        }
-
-        .skew-left {
-            transform: skewX(-4deg);
-        }
-
-        .skew-right {
-            transform: skewX(4deg);
-        }
-
-        .rotate-neg {
-            transform: rotate(-1.5deg);
-        }
-
-        .rotate-pos {
-            transform: rotate(1.5deg);
-        }
-
-        .full-bleed {
-            width: 100%;
-            max-width: none;
-        }
-
-        .mono {
-            font-family: 'Courier New', 'Consolas', monospace;
-            font-weight: 700;
-        }
-
-        /* ===== LAYOUT COMPONENTS ===== */
-        /* HEADER & NAV */
+        /* Navigation */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: #000000;
-            border-bottom: 4px solid #ff3b00;
-            padding: 16px 40px;
+            background: rgba(8, 8, 15, 0.9);
+            backdrop-filter: blur(4px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-wrapper {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            color: #ff3b00;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: none;
-            line-height: 1;
-        }
-
-        .logo span {
-            color: #ffffff;
-        }
-
-        .nav-desktop {
-            display: flex;
-            gap: 48px;
             align-items: center;
-            list-style: none;
+            height: 80px;
         }
 
-        .nav-desktop li a {
-            font-size: 1.1rem;
-            font-weight: 700;
+        .brand-name {
+            font-family: var(--f-heading);
+            font-size: var(--s-xl);
             text-transform: uppercase;
-            border-bottom: 3px solid transparent;
-            padding: 4px 0;
-            transition: 0.2s;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: -1px;
         }
 
-        .nav-desktop li a:hover {
-            border-bottom-color: #ff3b00;
-        }
-
-        /* Hamburger (mobile) */
-        .hamburger {
-            display: none;
+        .menu-btn {
+            cursor: pointer;
+            display: flex;
             flex-direction: column;
             gap: 6px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-            z-index: 1100;
-        }
-
-        .hamburger span {
-            display: block;
             width: 32px;
-            height: 4px;
-            background: #ffffff;
-            transition: 0.3s;
+            height: 20px;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(7px, 7px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
+        .bar {
+            height: 2px;
+            background-color: #fff;
+            transition: 0.3s cubic-bezier(1, 0, 0, 1);
         }
 
-        .nav-mobile {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: #000000;
-            flex-direction: column;
-            justify-content: center;
+        /* Hero Section */
+        .hero-section {
+            min-height: 85vh;
+            display: flex;
             align-items: center;
-            gap: 48px;
-            list-style: none;
-            z-index: 1050;
+            position: relative;
+            background: radial-gradient(circle at 70% 30%, rgba(255,92,26,0.1) 0%, transparent 40%);
         }
 
-        .nav-mobile.active {
-            display: flex;
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: calc(var(--p-section) / 2);
+            align-items: center;
         }
 
-        .nav-mobile li a {
-            font-size: 2.4rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            border-bottom: 4px solid #ff3b00;
+        .route-badge {
+            background: var(--c-accent);
+            color: #fff;
+            font-family: var(--f-heading);
             padding: 8px 16px;
-        }
-
-        /* HERO */
-        .hero {
-            margin-top: 90px;
-            padding: 120px 40px 80px;
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            border-bottom: 4px solid #ff3b00;
-        }
-
-        .hero__label {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            color: #ff3b00;
-            letter-spacing: 0.3em;
             text-transform: uppercase;
-            border: 3px solid #ff3b00;
-            display: inline-block;
-            padding: 8px 24px;
-            transform: skewX(-6deg);
-            width: fit-content;
-        }
-
-        .hero__title {
-            font-size: clamp(3.6rem, 14vw, 7.2rem);
-            line-height: 0.85;
-            max-width: 1000px;
-        }
-
-        .hero__sub {
-            font-size: 1.4rem;
-            font-family: system-ui, sans-serif;
-            font-weight: 400;
-            max-width: 640px;
-            border-left: 6px solid #ff3b00;
-            padding-left: 24px;
-        }
-
-        .hero__cta a {
-            display: inline-block;
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            background: #ff3b00;
-            color: #000000;
-            padding: 16px 48px;
-            border: 4px solid #ffffff;
-            box-shadow: 8px 8px 0 #ffffff;
-            transform: rotate(-1deg);
-            transition: 0.15s;
-            text-decoration: none;
-        }
-
-        .hero__cta a:hover {
-            background: #ffffff;
-            color: #000000;
-            border-color: #ff3b00;
-            box-shadow: 8px 8px 0 #ff3b00;
-            transform: rotate(0deg);
-        }
-
-        /* INFO STRIP */
-        .info-strip {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 48px 72px;
-            padding: 72px 40px;
-            border-bottom: 4px solid #ffffff;
-            font-size: 1.1rem;
-        }
-
-        .info-strip__item {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .info-strip__label {
-            font-family: 'Courier New', monospace;
-            font-size: 0.85rem;
-            color: #ff3b00;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-
-        .info-strip__value {
-            font-size: 1.6rem;
-            font-weight: 900;
-        }
-
-        .info-strip__value a {
-            border-bottom: 3px solid #ff3b00;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 120px 40px;
-        }
-
-        .section__header {
-            margin-bottom: 72px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .section__header .overline {
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            color: #ff3b00;
-            letter-spacing: 0.25em;
-            border-left: 4px solid #ff3b00;
-            padding-left: 16px;
-        }
-
-        /* REVIEW CARDS (UGC) */
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 48px;
-        }
-
-        .review-card {
-            border: 4px solid #ffffff;
-            background: #000000;
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            transform: rotate(var(--rot, 0deg));
-            box-shadow: 8px 8px 0 #ff3b00;
-        }
-
-        .review-card:nth-child(odd) { --rot: -1.5deg; }
-        .review-card:nth-child(even) { --rot: 1deg; }
-
-        .review-card__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
+            font-size: var(--s-sm);
+            display: inline-flex;
+            align-items: center;
             gap: 8px;
-            border-bottom: 2px solid #ff3b00;
-            padding-bottom: 12px;
         }
 
-        .review-card__nick {
-            font-size: 1.4rem;
-            font-weight: 900;
-            text-transform: uppercase;
+        .route-line-visual {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            width: 240px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--c-accent-dim), var(--c-accent));
+            transform: rotate(-15deg);
+            z-index: -1;
         }
 
-        .review-card__date {
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .review-card__stars {
-            font-size: 1.8rem;
-            letter-spacing: 0.1em;
-            color: #ff3b00;
-        }
-
-        .review-card__text {
-            font-family: system-ui, sans-serif;
-            font-weight: 400;
-            line-height: 1.5;
-            font-size: 1rem;
-            flex-grow: 1;
-        }
-
-        /* STATS BLOCK */
-        .stats-block {
+        /* Data Grid System (Main Concept) */
+        .grid-system {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 48px;
-            border: 4px solid #ff3b00;
-            padding: 64px 40px;
-            background: #000000;
-            box-shadow: 12px 12px 0 #ffffff;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--sp-container);
+            margin-top: 48px;
         }
 
-        .stat-item {
-            text-align: center;
-            border-right: 3px solid #333;
-            padding: 0 24px;
+        .data-cell {
+            padding: 32px 0;
+            border-right: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            transition: all 0.4s ease;
         }
 
-        .stat-item:last-child {
-            border-right: none;
+        .data-cell:last-child { border-right: none; }
+        
+        .data-cell:hover {
+            background-color: rgba(255,92,26,0.03);
+            padding-left: var(--sp-container); /* Shift effect */
         }
 
-        .stat-item__number {
-            font-size: 3.6rem;
-            font-weight: 900;
-            color: #ff3b00;
-            line-height: 1;
-        }
-
-        .stat-item__label {
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            letter-spacing: 0.15em;
+        .cell-label {
+            font-family: var(--f-heading);
+            font-size: var(--s-sm);
+            font-weight: 600;
             text-transform: uppercase;
+            color: var(--c-accent);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .cell-value {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+
+        .cell-subtext {
+            font-size: var(--s-sm);
+            color: var(--c-tertiary);
             margin-top: 8px;
+            display: block;
         }
 
-        /* CTA SECTION */
-        .cta-section {
-            background: #ff3b00;
-            color: #000000;
-            padding: 120px 40px;
-            text-align: center;
-            border-top: 4px solid #ffffff;
-            border-bottom: 4px solid #ffffff;
-        }
-
-        .cta-section h2 {
-            border-bottom-color: #000000;
-            color: #000000;
-            font-size: clamp(2.8rem, 8vw, 5rem);
-        }
-
-        .cta-section .cta-link {
-            display: inline-block;
-            font-size: 2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            background: #000000;
-            color: #ffffff;
-            padding: 20px 64px;
-            border: 4px solid #ffffff;
-            box-shadow: 8px 8px 0 #000000;
-            transform: rotate(1deg);
-            margin-top: 32px;
-            transition: 0.15s;
-        }
-
-        .cta-section .cta-link:hover {
-            background: #ffffff;
-            color: #000000;
-            border-color: #000000;
-            box-shadow: 8px 8px 0 #ff3b00;
-            transform: rotate(-0.5deg);
-        }
-
-        /* FOOTER */
+        /* Footer */
         footer {
-            padding: 72px 40px 40px;
-            border-top: 4px solid #ff3b00;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 32px;
-            font-family: system-ui, sans-serif;
+            padding: calc(var(--p-section) * 1.5) 0;
+            text-align: center;
+            font-size: var(--s-sm);
+            color: var(--c-tertiary);
         }
-
-        footer .copy {
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        footer .footer-links {
-            display: flex;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        footer .footer-links a {
-            font-size: 0.9rem;
-            border-bottom: 2px solid transparent;
-        }
-
-        footer .footer-links a:hover {
-            border-bottom-color: #ff3b00;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 48px 24px;
-            }
-
-            .section-gap {
-                padding: 80px 24px;
-            }
-
-            header {
-                padding: 12px 24px;
-            }
-
-            .nav-desktop {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero {
-                padding: 100px 24px 60px;
-                margin-top: 80px;
-            }
-
-            .hero__title {
-                font-size: clamp(2.8rem, 10vw, 4.8rem);
-            }
-
-            .hero__cta a {
-                font-size: 1.4rem;
-                padding: 14px 32px;
-            }
-
-            .info-strip {
-                padding: 48px 24px;
-                gap: 32px;
-            }
-
-            .info-strip__value {
-                font-size: 1.3rem;
-            }
-
-            section {
-                padding: 80px 24px;
-            }
-
-            .section__header {
-                margin-bottom: 48px;
-            }
-
-            .review-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .review-card {
-                transform: none;
-            }
-
-            .stats-block {
-                grid-template-columns: 1fr 1fr;
-                padding: 40px 24px;
-                gap: 32px;
-            }
-
-            .stat-item {
-                border-right: none;
-                border-bottom: 3px solid #333;
-                padding-bottom: 24px;
-            }
-
-            .stat-item:nth-child(even) {
-                border-bottom: none;
-            }
-
-            .cta-section {
-                padding: 80px 24px;
-            }
-
-            .cta-section .cta-link {
-                font-size: 1.6rem;
-                padding: 16px 40px;
-            }
-
-            footer {
-                flex-direction: column;
-                text-align: center;
-                padding: 48px 24px;
-            }
-
-            footer .footer-links {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .stats-block {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-item {
-                border-bottom: 3px solid #333;
-                padding-bottom: 24px;
-            }
-
-            .stat-item:last-child {
-                border-bottom: none;
-            }
+        .footer-text {
+            font-size: var(--s-xs);
+            letter-spacing: 0.05em;
         }
     </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
-        <a href="/" class="logo">TOKYO<span>_SOLAR</span></a>
-
-        <nav aria-label="주요 메뉴">
-            <ul class="nav-desktop">
-                <li><a href="#about">About</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#stats">Data</a></li>
-                <li><a href="#visit">Visit</a></li>
-            </ul>
-
-            <button class="hamburger" id="hamburgerBtn" aria-label="메뉴 열기" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="nav-mobile" id="mobileMenu">
-                <li><a href="#about" onclick="closeMenu()">About</a></li>
-                <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
-                <li><a href="#stats" onclick="closeMenu()">Data</a></li>
-                <li><a href="#visit" onclick="closeMenu()">Visit</a></li>
-            </ul>
-        </nav>
+        <div class="container nav-wrapper">
+            <div class="brand-name">합정 컬러스트</div>
+            <div class="menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero full-bleed" aria-label="메인 히어로">
-        <div class="hero__label">EST. 2022 · 합정</div>
-        <h1 class="hero__title">합정 클럽<br>추천정보<br><span class="text-accent">#1</span></h1>
-        <p class="hero__sub">프리미엄 사운드 시스템 · 엄선된 큐레이션 · 매주 500+ 방문객이 증명하는 합정 대표 클럽</p>
-        <div class="hero__cta">
-            <a href="tel:+821062790862">010-6279-0862</a>
+    <section class="hero-section">
+
+<!-- SEO Visual 1: 합정 클럽 추천정보 Brutalist Avant-Garde Hero -->
+<div class="seo-visual-hero" role="img" aria-label="강남 클럽 정보 — 합정 합정 클럽 추천정보" 
+     style="width:100%;padding:120px 0 60px 0;background:#ffffff;text-align:left;margin:0;position:relative">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#000000;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
+    <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#000000;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">합정 클럽 추천정보</div>
+    <p style="font-size:1.1rem;line-height:1.7;color:#000000;max-width:550px;font-weight:300;margin:0">강남 클럽 정보</p>
+  </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"합정 클럽 추천정보","description":"강남 클럽 정보","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+        <div class="container hero-content">
+            <div>
+                <span class="route-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 3.5 3.6 8.4 7 11.2C15.4 17.4 19 12.5 19 9c0-3.87-3.13-7-7-7zm0 13.5c-2.49 0-4.5-2.01-4.5-4.5s2.01-4.5 4.5-4.5 4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z" fill="#fff"/>
+                        <circle cx="12" cy="9" r="2.5" fill="#08080f"/>
+                    </svg>
+                    합정역 중심
+                </span>
+                <h1>밤의 지도를 펼치다</h1>
+                <p>
+                    합정, 홍대, 상수 이 세 지역은 서울의 젊음과 열기가 가장 뜨겁게 타ᄋ오르는 곳입니다. 저마다의 색깔을 가진 클럽들은 밤이 되면 화려한 조명과 강렬한 비트로 사람들을 유혹하죠. 하지만 어디로 가야 할지, 어떤 분위기가 나에게 맞을지 망설여지는 순간이 있습니다. 이뽓, 합정 클러스트는 단순한 정보 나열을 넘어, 당신의 밤을 위한 최적의 경로를 탐색하는 나침반이 되어줄 것입니다. 복잡하게 얽힌 밤문화의 실타래를 풀어내듯, 각 클럽의 특징과 매력을 지도 위에 그려내고, 당신이 원하는 경험으로 향하는 가장 빠른 길을 안내합니다.
+                </p>
+            </div>
+            <div class="route-line-visual"></div>
         </div>
     </section>
 
-    <!-- INFO STRIP -->
-    <div class
+<!-- SEO Visual 2: 클럽 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="합정 클럽 추천정보 클럽 — 강남 클럽 정보" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">합정 클럽 추천정보</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">합정 클럽 추천정보</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">합정 클럽 추천정보</div>
+  </div>
+</div>
+
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>데이터 기반 분석</h2>
+                <div class="small-text">합정 클럽 생태계</div>
+            </div>
+            <div class="grid-system">
+                <div class="data-cell">
+                    <span class="cell-label">접근성</span>
+                    <span class="cell-value">95%</span>
+                    <span class="cell-subtext">합정역 도보 5분 이내</span>
+                </div>
+                <div class="data-cell">
+                    <span class="cell-label">음악 스펙트럼</span>
+                    <span class="cell-value">88%</span>
+                    <span class="cell-subtext">EDM, 힙합, R&B 등 다양</span>
+                </div>
+                <div class="data-cell">
+                    <span class="cell-label">분위기</span>
+                    <span class="cell-value">92%</span>
+                    <span class="cell-subtext">활기참, 캐주얼, 세련됨</span>
+                </div>
+                <div class="data-cell">
+                    <span class="cell-label">평균 이용 시간</span>
+                    <span class="cell-value">3.5시간</span>
+                    <span class="cell-subtext">최적의 경험을 위한 시간</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>합정 클럽, 무어ᄕ을 담고 있는가?</h2>
+                <div class="small-text">나만의 밤을 위한 선택지</div>
+            </div>
+            <h3>트렌드를 이끄는 메인 스트림</h3>
+            <p>
+                합정역 주변에는 언제나 최신 트렌드를 반영하는 클럽들이 즐비합니다. 대중적인 EDM 서운드와 화려한 조명, 젊음의 에너지가 넘치는 이곳들은 클럽 문화를 처음 접하는 이들도 부담 없이 즐길 수 있는 매력을 지니고 있습니다. 주말 밤이면 발 디딜 틈 없이 사람들로 가득 차는 이곳들은 서울 밤문화의 중심축이라 해도 과언이 아닙니다. 힙합이나 R&B를 선호하는 이들을 위한 전문적인 플레이스도 존재하며, 각기 다른 음악적 취향을 가진 이들이 모여 밤새도록 춤추고 즐기는 광경은 합정의 밤을 더욱 풍요롭게 만듭니다. 이곳은 단순히 음악을 듣는 공간을 넘어, 새로운 사람들과 교류하고 젊음의 에너지를 만끽할 수 있는 축제의 장입니다.
+            </p>
+            <p>
+                ᄋ이러하ᄗ 메인 스트림 클럽들은 접근성이 뛰어나타는 장점도 있습니다. 합정역이나 상수역에서 도보로 이동 가능한 거리에 위치한 경우가 많아, 대중교통 이용이 편리합니다. 또한, 넓은 공간과 체계적인 시스템을 갖춘 곳들이 많아 편안하고 안전하게 밤을 즐길 수 있도록 설계되어 있습니다. 다양한 종류의 주류와 간단한 안주를 판매하는 바 공간은 춤추ᄂ는 것에 지쳤거나, 친구들과 좀 더 조용하게 이야기를 나누고 싶은 이들에게 안성맞춤입니다. 이러한 편의 시설들은 합정 클럽들이 단순한 유흥 공간을 넘어, 종합적인 엔터데인먼트 경험을 제공하는 복합 문화 공간으로 자리매김하게 하는 중요한 요소입니다.
+            </p>
+            
+            <h3>색다른 경험을 선사하는 로컬 핫플레이스</h3>
+            <p>
+                대형 클럽들의 화려함과는 또 다른 매력을 가진, 좀 더 아늑하고 개성 넘치는 공간들도 합정 밤문화의 빼놓을 수 없는 부분입니다. 힙스터들의 성지라 불리는 합정 골목길 깊숙한 곳에는 숨겨진 보석 같은 클럽들이 자리하고 있습니다. 이곳들은 특정 장르의 음악에 집중하거나, 독특한 인테리어와 콘셉트로 방문객들에게 특별한 경험을 선사합니다. 인디 밴드의 라이브 공연을 즐길 수 있는 라이ᄇ브 클럽부터, 실ᆯ험적인 DJ들의 세트 리스트로 채워지는 언더그라운드 클럽까지, 선택의 폭은 더욱 넓어집니다. 이런 곳들은 종종 소규모로 운영되지만, 그만큼 친밀하고 열정적인 분위기를 느낄 수 있다는 장점이 있습니다.
+            </p>
+            <p>
+                이러한 로컬 핫플레이스는 종종 예상ᆼ치 못한 즐거움을 안겨줍니다. 홍대와 합정의 경계선에 위치한 이곳들은, 주류 트렌드에서 한 발짝 벗어나 쟈신만의 색깔을 고수하며 마니아층을 형성하고 있습니다. 특정 DJ의 팬이거나, 특정 음악 장르를 깊이 있게 즐기고 싶은 사람들에게는 최고의 선택지가 될 것입니다. 또한, 이곳에서는 종종 즉흥적인 이벤트나 파티가 열리기도 하며, 이는 방문객들에게 잊지 못할 추억을 선사합니다. 북적이는 메인 스트리트에서 벗어나, 자신만의 취향을 만족시킬 수 있는 특별한 밤을 원한다면, 합정의 숨겨진 골목길을 탐험해 보는 것을 츄천합니다. 이곳이야말로 진정한 '힙'함을 발견할 수 있는 곳이니까요.
+            </p>
+
+            <h3>목적별 최적화 전략</h3>
+            <p>
+                합정 클러스트는 당신의 밤을 더욱 특별하게 만들기 위한 맞춤형 가이드를 제공합니다. 친구들과의 즐거윤 시간을 위해선 활기찬 에너지가 넘치는 메인 클럽을, 혹은 특별한 기념일을 위한 프라이빗한 파티를 계획하고 있다면 룸바 형태의 공간을 추천합니다. 혼자만의 시간을 보내고 싶거나, 새로운 사람들과의 만남을 기대한다면, 좀 더 캐주얼하고 열린 분위기의 바나 라운지 형태의 클럽이 좋은 선택이 될 수 있습니다. 각 클럽의 음악 스타일, 드레스 코드, 평균 연령대, 주요 고객층 등 상세한 정보를 미리 파악하면, 기대했던 것 이상의 만족스러운 경험을 얻을 수 있을 것입니다.
+            </p>
+            <p>
+                나아가, 합정 클럽들은 종종 특정 요일이나 시즌에 맞춰 특별한 테마 파티를 개최합니다. 이러한 이벤트 정보를 미리 확인하면 더욱 다채로운 밤을 즐길 ᄉ수 있습니다. 예를 들어, 특정 장르의 DJ가 라인업으로 참여하는 날, 혹은 특별한 퍼포먼스가 준비된 날은 일반적인 방문보다 훨씬 강렬한 경험을 선사할 수 있습니다. 또한, 클럽의 위치와 교통편, 운영 시간, 입장료 및 테이블 예약 정보까지, 사전에 꼼꼼히 확인하는 것이 중요합니다. 합정 클러스트는 이러한 모든 정보들을 종합적으로 제공하여, 당신의 밤이 계획대로, 혹은 그 이상의 즐거움으로 가득 채워질 수 있도록 돕습니다. 밤은 기다려주지 않기에, 당신의 가장 완벽한 밤을 위한 현명한 선택을 돕겠습니다.
+            </p>
+        </div>
+    
+<div class="seo-visual-divider" role="separator" aria-label="합정 클럽 추천정보 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2023. HAPJEONG CLUSTER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="juice-ref-wbk96b" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
+      <li>심층 정보와 실제 데이터는 <a href="https://water-server.store/">tokyo-water</a>를 참고하세요.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
 </body>
 </html>
