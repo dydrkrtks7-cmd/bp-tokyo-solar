@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://blog.top-seocho-karaoke.xyz/sitemap.xml
+Sitemap: https://blog.top-seocho-karaoke.xyz/sitemap-pages.xml
