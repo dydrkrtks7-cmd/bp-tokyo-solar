@@ -267,6 +267,13 @@ div[data-post-index-navigation="true"] a { display:inline-flex !important; visib
 nav.pager, nav.post-pager, nav[data-site-documents="true"] { display:flex !important; visibility:visible !important; flex-wrap:wrap; gap:12px; padding:16px 0; }
 nav.pager a, nav.post-pager a, nav[data-site-documents="true"] a { display:inline-flex !important; visibility:visible !important; align-items:center; padding:6px 10px; color:inherit; }
 :where(main, article, .content) :where(img), :where(body) > :where(img) { max-width:100%; height:auto; }
+/* legacy-mobile-weighted-route */
+@media (max-width:768px) {
+  .hero-content, .grid-system { grid-template-columns:minmax(0,1fr); min-width:0; }
+  .hero-content > *, .grid-system > * { min-width:0; box-sizing:border-box; }
+  .container { box-sizing:border-box; min-width:0; max-width:100%; padding-inline:clamp(16px,4vw,24px); }
+  .route-line-visual { right:0; width:min(240px,100%); }
+}
 </style></head>
 <body><div data-post-index-navigation="true" aria-label="글 목록 안내"><a href="posts.html">글 목록</a></div>
  <header>
